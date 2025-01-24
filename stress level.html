@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Accelerometer Difficulty Visualizer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 400px;
+        margin: 20px auto;
+        text-align: center;
+      }
+      #accelerometerInput {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      #difficultyIndicator {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+      }
+      .low-green {
+        background-color: #2ecc71;
+      }
+      .yellow-medium {
+        background-color: #f39c12;
+      }
+      .yellow-high {
+        background-color: #d35400;
+      }
+      .red-low {
+        background-color: #e74c3c;
+      }
+      .red-medium {
+        background-color: #c0392b;
+      }
+      .red-extreme {
+        background-color: #7f0000;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Accelerometer Difficulty</h2>
+    <input type="number" id="accelerometerInput" placeholder="Enter value" />
+    <div id="difficultyIndicator">Enter a value</div>
+
+    <script>
+      const input = document.getElementById("accelerometerInput");
+      const indicator = document.getElementById("difficultyIndicator");
+
+      input.addEventListener("input", function () {
+        const value = parseFloat(this.value);
+
+        indicator.className = "";
+
+        if (isNaN(value)) {
+          indicator.textContent = "Enter a valid number";
+          return;
+        }
+
+        switch (value) {
+          case 1:
+          case 2:
+            indicator.classList.add("low-green");
+            indicator.textContent = `Low Difficulty (${value})`;
+            break;
+          case 3:
+            indicator.classList.add("yellow-medium");
+            indicator.textContent = `Low Difficulty (${value})`;
+            break;
+          case 4:
+          case 5:
+            indicator.classList.add("yellow-medium");
+            indicator.textContent = `Medium Difficulty (${value})`;
+            break;
+          case 6:
+            indicator.classList.add("yellow-medium");
+            indicator.textContent = `Medium Difficulty (${value})`;
+            break;
+          case 7:
+            indicator.classList.add("yellow-high");
+            indicator.textContent = `Medium Difficulty (${value})`;
+            break;
+          case 8:
+            indicator.classList.add("red-low");
+            indicator.textContent = `High Difficulty (${value})`;
+            break;
+          case 9:
+            indicator.classList.add("red-medium");
+            indicator.textContent = `High Difficulty (${value})`;
+            break;
+          case 10:
+            indicator.classList.add("red-extreme");
+            indicator.textContent = `Extreme Difficulty (${value})`;
+            break;
+          default:
+            indicator.textContent = "Value outside ranges";
+        }
+      });
+    </script>
+  </body>
+</html>
