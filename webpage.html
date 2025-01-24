@@ -6,6 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="cssnew.css" />
   </head>
+    <style>
+      @keyframes appear{
+        from {
+          opacity: 0;
+          scale: 0.5;
+        }
+        to {
+          opacity: 1;
+          scale: 1;
+        }
+      }
+      .content{
+        animation: appear  linear;
+        animation-timeline:view() ;
+        animation-range: entry 0% cover 20%;
+      }
+      /* Styling for the hover effect */
+      .image1 img,
+      .image2 img {
+        transition: transform 0.3s ease; /* Smooth transition */
+      }
+
+      .image1 img:hover,
+      .image2 img:hover {
+        transform: translateY(-20px); /* Move the image up */
+      }
+    </style>
   <body>
     
     <div id="overlay"></div>
@@ -34,6 +61,7 @@
     <section id="about">
       <div class="container">
         <div class="content">
+          
           <h2 style="font-size: 120px;">About </h2>
           <div class="us">
           <h2 style="font-size: 120px;color: rgb(228, 26, 255);">Us </h2>
@@ -64,7 +92,7 @@
           </p>
         </div>
       </div>
-     <div class="content"><img style="margin-left:50%;" src="https://assets.betterhelp.com/betterhelp_two/photos/image-how-it-works-2.png?v=bbf53129b530"></div>
+     <div class="image2"><div class="content"><img style="margin-left:50%;" src="https://assets.betterhelp.com/betterhelp_two/photos/image-how-it-works-2.png?v=bbf53129b530"></div></div>
     </section>
     <section id="download">
       <div class="container">
@@ -75,6 +103,7 @@
           </p>
           <a
             class="button"
+            style="font-size: 70px;"
             href="https://drive.google.com/drive/folders/1gneHek_BgLQjtVrxCZskMNlTyGffHsJ7?usp=drive_link"
             download="Stress_App.exe"
             >Download App</a
@@ -87,8 +116,15 @@
       <div class="container">
         <div class="content">
           <h1 style="font-size: 100px;margin-top: 50px;">Sign up</h1>
-      <button class="login" style="margin-top: 20px;font-size: 50px;">Sign up</button>
+  
+          <a
+            class="login"
+            style="font-size: 40px;"
+            href="sign up.html"
+            
+            >Sign up</a
           
+          >
           </div>
           </div>
       </div>
@@ -100,5 +136,8 @@
     <center><a style="text-decoration: none;color: rgb(255, 255, 255);" href="https://chamindapeiris1976.wixsite.com/hupe-1">Sample picture's</a></center>
      </div> 
     
+      <div class="Sample ">
+    <center><a style="text-decoration: none;color: rgb(255, 255, 255);" href="https://chamindapeiris1976.wixsite.com/hupe-1">Tools we made. plan to use for the app we</a></center>
+     </div> 
   </body>
 </html>
