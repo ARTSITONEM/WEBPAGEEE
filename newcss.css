@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.card-container{
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.card{
+    width: 325px;
+    background-color: gray;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 2);
+    padding: 20px;
+}
+
+.birdimg{
+    width: 130px;
+    margin-left: 5%;
+    margin-top: -20%;
+    
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    padding: 20px;
+    cursor: pointer;
+
+}
+#container div{
+    height: 370px;
+    width: 335px;
+    padding: 20px;
+    background-image: linear-gradient(rgb(0, 149, 255),rgb(69, 116, 255));
+    margin: 60px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+#container :hover{
+    height: 220px;
+    transition: .5s;
+}
+

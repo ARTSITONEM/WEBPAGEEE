@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="newcss.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></script>
+    <title>Navigation Bar with Animations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes appear{
+            from{
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+        .content{
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 40px 80px;
+        }
+        .navbar-logo img {
+            height: 50px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .navbar-logo img:hover {
+            transform: scale(1.1);
+        }
+        .navbar-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar-links li {
+            margin: 0 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .navbar-links li:hover {
+            transform: translateY(-5px);
+        }
+        .navbar-links a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+        .navbar-links a:hover {
+            color: #477eff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="duolingo-landscape-lockup.png" alt="Logo">
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</body> 
+<section id="home">
+<div class="content"> 
+<div style="background-image:url(https://e0.pxfuel.com/wallpapers/836/246/desktop-wallpaper-light-outdoors-nature-astronomy-night-resized-kurzgesagt.jpg) ;padding: 50px;">
+    <div style="margin-top: 50px;"></div>
+<header style="font-size: 130px;color: white;margin-left: 30%;font-weight: bold;   ">WE ARE</header>
+<header style="font-size: 130px;color: #ffcc02; margin-left: 50%;font-weight: bold;">Hupe</header><p style="max-width: 600px;color: white;font-weight: bold;">we are team that finds the level and type of stress a person has in a time efficient way with a user friendly expirience</p></div>
+
+
+</div>
+</section>
+<body>
+    <section id="about">
+    <div class="content">
+    <h1 style="font-size: 100px;margin-top: 109px;margin-left: 20%;">What We do?</h1>
+    <img class="birdimg"   src="birdi.png">
+</div>
+</body>
+
+</html>
